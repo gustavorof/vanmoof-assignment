@@ -1,0 +1,137 @@
+
+# Created by https://www.gitignore.io/api/git,magento2,phpstorm
+
+### Git ###
+*.orig
+*.sample
+
+### Magento2 ###
+#----------------------------#
+# Magento 2 Default Files    #
+#----------------------------#
+
+/.buildpath
+/.cache
+/.metadata
+/.project
+/.settings
+atlassian*
+/nbproject
+/sitemap
+/sitemap.xml
+/.idea
+/.gitattributes
+/dev/*
+/lib/*
+/setup/*
+/var/*
+/vendor/*
+/phpserver/*
+index.php
+
+
+### PhpStorm ###
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff:
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/dictionaries
+
+# Sensitive or high-churn files:
+.idea/**/dataSources/
+.idea/**/dataSources.ids
+.idea/**/dataSources.xml
+.idea/**/dataSources.local.xml
+.idea/**/sqlDataSources.xml
+.idea/**/dynamic.xml
+.idea/**/uiDesigner.xml
+
+# Gradle:
+.idea/**/gradle.xml
+.idea/**/libraries
+
+# CMake
+cmake-build-debug/
+
+# Mongo Explorer plugin:
+.idea/**/mongoSettings.xml
+
+## File-based project format:
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Cursive Clojure plugin
+.idea/replstate.xml
+
+# Ruby plugin and RubyMine
+/.rakeTasks
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+### PhpStorm Patch ###
+# Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
+
+# *.iml
+# modules.xml
+# .idea/misc.xml
+# *.ipr
+
+# Sonarlint plugin
+.idea/sonarlint
+
+
+# End of https://www.gitignore.io/api/git,magento2,phpstorm
+
+/generated/
+/pub/
+/node_modules/
+auth.json
+auth.json.sample
+.htaccess
+.htaccess.sample
+.travis.yml
+.user.ini
+.github/
+README_EE.md
+CHANGELOG.md
+COPYING.txt
+index.php
+LICENSE.txt
+LICENSE_AFL.txt
+LICENSE_EE.txt
+nginx.conf.sample
+package.json.sample
+Gruntfile.js
+grunt-config.json
+package.json
+
+/app/autoload.php
+/app/bootstrap.php
+/app/functions.php
+/app/etc/*
+!app/etc/configurator/
+!app/etc/master.yaml
+!app/etc/config.php
+/addRemote
+/bin/*
+!bin/add_remotes
+!bin/monorepo_split
+!bin/release
+.editorconfig
+.php_cs.dist
