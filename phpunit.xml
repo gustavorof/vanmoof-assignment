@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd" colors="true"
+         bootstrap="./app/bootstrap.php">
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">./app/code</directory>
+        </include>
+        <exclude>
+            <directory suffix="registration.php">./app/code</directory>
+            <directory suffix=".php">./app/code/*/*/Test</directory>
+            <directory suffix=".php">./app/code/*/*/Setup</directory>
+        </exclude>
+        <report>
+            <html outputDirectory="./var/unit-test-coverage" lowUpperBound="35" highLowerBound="80"/>
+        </report>
+    </coverage>
+    <php>
+        <ini name="error_reporting" value="-1"/>
+        <ini name="xdebug.mode" value="coverage"/>
+        <env name="XDEBUG_MODE" value="coverage"/>
+    </php>
+    <testsuite name="Magento Unit Tests">
+        <directory suffix="Test.php">app/code/VanMoof/*/Test/Unit</directory>
+    </testsuite>
+    <logging/>
+</phpunit>

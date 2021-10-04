@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="VanMoof\ProductDelivery\Model\DeliveryDateProviderInterface"
+                type="VanMoof\ProductDelivery\Model\DeliveryDateProvider"/>
+
+    <type name="Magento\Catalog\Ui\DataProvider\Product\ProductRenderCollectorComposite">
+        <arguments>
+            <argument name="productProviders" xsi:type="array">
+                <item name="delivery_date" xsi:type="object">
+                    VanMoof\ProductDelivery\Ui\DataProvider\Product\Listing\Collector\DeliveryDate
+                </item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Catalog\Api\ProductRepositoryInterface">
+        <plugin name="product_delivery_date"
+                type="VanMoof\ProductDelivery\Plugin\Catalog\Api\ProductRepositoryInterface\ProductDeliveryDatePlugin"/>
+    </type>
+</config>
